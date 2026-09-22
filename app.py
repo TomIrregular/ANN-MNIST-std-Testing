@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import PIL.ImageOps
+import tf_keras
 from PIL import Image
 import streamlit as st
 import tensorflow as tf
@@ -16,7 +17,7 @@ MODEL_PATH = "67102010529_mnist_model.keras"
 def load_mnist_model(path: str):
     if not os.path.exists(path):
         return None
-    return tf.keras.models.load_model(path)
+    return tf_keras.models.load_model(path)
 
 model = load_mnist_model(MODEL_PATH)
 
