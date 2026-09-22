@@ -16,7 +16,7 @@ MODEL_PATH = "67102010529_mnist_model.keras"
 def load_mnist_model(path: str):
     if not os.path.exists(path):
         return None
-    return tf.keras.models.load_model(path))
+    return tf.keras.models.load_model(path)
 
 model = load_mnist_model(MODEL_PATH)
 
